@@ -123,6 +123,246 @@ body {
   background: #fafafa;
 }
 
+.landing-hero {
+  border-color: #d6d9df;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.landing-urgency {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.landing-points {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+  color: #1f2937;
+  font-size: 15px;
+}
+
+.landing-content {
+  gap: 16px;
+}
+
+.matrix-panel {
+  gap: 12px;
+}
+
+.matrix-subtitle {
+  font-size: 14px;
+}
+
+.matrix-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.legend-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.matrix-wrap {
+  overflow-x: auto;
+  border: 1px solid #d9dde4;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.impact-matrix {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+}
+
+.matrix-corner,
+.matrix-col-head,
+.matrix-row-head,
+.matrix-cell {
+  border-bottom: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+.impact-matrix tr:last-child .matrix-row-head,
+.impact-matrix tr:last-child .matrix-cell {
+  border-bottom: 0;
+}
+
+.impact-matrix th:last-child,
+.impact-matrix td:last-child {
+  border-right: 0;
+}
+
+.matrix-corner {
+  width: 180px;
+  padding: 12px;
+  font-size: 12px;
+  color: #6b7280;
+  background: #f9fafb;
+}
+
+.matrix-col-head {
+  min-width: 166px;
+  padding: 12px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.35;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.matrix-col-head.is-highlight {
+  background: #ecfdf5;
+  color: #166534;
+}
+
+.matrix-row-head {
+  width: 180px;
+  padding: 12px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.35;
+  color: #1f2937;
+  background: #f9fafb;
+}
+
+.matrix-cell {
+  padding: 10px;
+}
+
+.cell-content {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #111827;
+}
+
+.cell-icon {
+  line-height: 1;
+  margin-top: 1px;
+  font-size: 15px;
+}
+
+.cell-icon.is-skull {
+  font-size: 19px;
+  font-weight: 700;
+  color: #7f1d1d;
+}
+
+.matrix-cell.is-highlight-column {
+  box-shadow: inset 0 0 0 1px #86efac;
+}
+
+.tone-critical {
+  background: #fee2e2;
+}
+
+.tone-danger {
+  background: #fef2f2;
+}
+
+.tone-critical .cell-content,
+.tone-danger .cell-content {
+  color: #7f1d1d;
+}
+
+.tone-warning {
+  background: #fffbeb;
+}
+
+.tone-strategic {
+  background: #eff6ff;
+}
+
+.tone-leverage {
+  background: #dcfce7;
+}
+
+.tone-builder {
+  background: #dcfce7;
+}
+
+.impact-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.impact-row {
+  display: grid;
+  gap: 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.impact-row.is-highlight {
+  border-color: #94a3b8;
+  background: #f8fafc;
+}
+
+.impact-group {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.impact-line {
+  margin: 0;
+  font-size: 14px;
+  color: #374151;
+}
+
+.impact-label {
+  font-weight: 600;
+  color: #111827;
+}
+
+.compression-grid,
+.result-signal-grid,
+.role-lens-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.compression-card,
+.signal-card {
+  display: grid;
+  gap: 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.compact-list {
+  gap: 6px;
+}
+
+.result-note {
+  margin: 0;
+  font-size: 14px;
+  color: #374151;
+}
+
 .asset-placeholder strong {
   font-size: 14px;
 }
@@ -332,6 +572,20 @@ blockquote {
   .hero-block {
     padding: 24px;
   }
+
+  .landing-content {
+    gap: 24px;
+  }
+
+  .impact-grid,
+  .result-signal-grid,
+  .role-lens-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .compression-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -342,5 +596,27 @@ blockquote {
 
   .critique-asset-image {
     max-height: 280px;
+  }
+
+  .matrix-corner,
+  .matrix-row-head {
+    width: 150px;
+    min-width: 150px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .matrix-col-head {
+    min-width: 150px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .matrix-cell {
+    padding: 9px;
+  }
+
+  .cell-content {
+    font-size: 12px;
   }
 }
